@@ -1700,10 +1700,10 @@ var modals = function modals() {
     });
   }
 
-  bindModal('.button-design', '.popup-design', '.popup-design .popup-close');
-  bindModal('.button-consultation', '.popup-consultation', '.popup-consultation .popup-close');
-  bindModal('.fixed-gift', '.popup-gift', '.popup-gift .popup-close', true);
-  openByScroll('.fixed-gift'); // showModalByTime('.popup-consultation', 5000);
+  bindModal('.button__callme', '.popup-consultation', '.popup-consultation .popup-close');
+  bindModal('.button_submit', '.popup-design', '.popup-design .popup-close');
+  bindModal('.button__calc', '.popup-gift', '.popup-gift .popup-close', true);
+  openByScroll('.button__calc'); // showModalByTime('.popup-consultation', 5000);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (modals);
