@@ -651,6 +651,9 @@ body{
 		background: transparent;
 		color: $white;
 		border: none;
+		&:hover{
+			border: none;
+		}
 	}
 	&-content{
 		position: fixed;
