@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url(~animate.css/animate.css);
 body {
   font-family: 'Roboto', sans-serif;
   color: #ffffff; }
@@ -456,6 +457,26 @@ body {
     .comment-item__img {
       border-radius: 100%; }
 
+.main-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 3rem;
+  border: none;
+  padding: 0;
+  z-index: 10;
+  background-color: transparent; }
+
+.main-slider-btn img {
+  width: 100%; }
+
+.main-prev-btn {
+  left: 0; }
+
+.main-next-btn {
+  right: 0; }
+
 .questions {
   background-image: url(../img/questions/questions-bg.jpg);
   min-height: 430px;
@@ -538,7 +559,29 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: #ec644b; }
+  background-color: rgba(178, 80, 18, 0.8); }
+  .popup-consultation .form {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0; }
+    .popup-consultation .form input, .popup-consultation .form textarea {
+      border: none;
+      border-radius: 50px;
+      background-color: #ffffff;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      width: 100%;
+      color: inherit;
+      resize: none; }
+    .popup-consultation .form input::placeholder, .popup-consultation .form textarea::placeholder {
+      color: red;
+      text-align: center; }
+  .popup-consultation .button-order {
+    width: 100%;
+    margin-top: 1rem; }
+  .popup-consultation h4 {
+    margin-bottom: 3.5rem;
+    color: #ec644b; }
 
 .popup-close {
   position: absolute;
@@ -552,8 +595,6 @@ body {
   background: transparent;
   color: #ffffff;
   border: none; }
-  .popup-close:hover {
-    border: none; }
 
 .popup-content {
   position: fixed;
@@ -563,34 +604,174 @@ body {
   top: 20%;
   background-color: #ededed;
   border-radius: 4px;
-  transform: translateX(-50%);
+  transform: translateX(-50%) !important;
   padding: 4rem 6rem 5rem 6rem; }
 
-.button-transparent {
-  border: 2px dashed #ec644b;
+.popup-gift {
+  z-index: 20;
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  margin-bottom: 2rem; }
+  height: 100%;
+  background-color: rgba(178, 80, 18, 0.8); }
+  .popup-gift h2 {
+    padding-bottom: 2rem;
+    color: #ec644b; }
+  .popup-gift img {
+    display: block;
+    margin: 0 auto; }
+  .popup-gift p {
+    margin-top: 2rem; }
 
-.form {
-  margin: 0;
-  padding-top: 0;
-  padding-bottom: 0; }
-  .form input, .form textarea {
-    border: none;
-    border-radius: 50px;
-    background-color: #ffffff;
-    padding: 1.5rem;
-    margin-bottom: 2.5rem;
+.popup-close {
+  position: absolute;
+  top: -5rem;
+  right: -1.5rem;
+  font-size: 5rem;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  background: transparent;
+  color: #ffffff;
+  border: none; }
+
+.popup-content {
+  position: fixed;
+  text-align: center;
+  max-width: 35rem;
+  left: 50%;
+  top: 20%;
+  background-color: #ededed;
+  border-radius: 4px;
+  transform: translateX(-50%) !important;
+  padding: 4rem 6rem 5rem 6rem; }
+
+.popup-design {
+  z-index: 20;
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(178, 80, 18, 0.8);
+  /* Making it beautiful */ }
+  .popup-design input[name="name"] {
+    margin-top: 2rem; }
+  .popup-design .file_upload {
+    position: relative;
+    overflow: hidden;
+    font-size: 1em;
+    /* example */
+    height: 4em;
+    /* example */
+    line-height: 2em; }
+  .popup-design .file_upload > button {
+    float: right;
+    width: 8em;
+    /* example */
+    height: 100%; }
+  .popup-design .file_upload > div {
+    color: #ec644b;
+    padding-left: 1em;
+    /* example */ }
+  .popup-design .file_upload input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
-    color: inherit;
-    resize: none; }
-  .form input::placeholder, .form textarea::placeholder {
-    color: black;
-    text-align: center; }
+    height: 100%;
+    transform: scale(20);
+    letter-spacing: 10em;
+    /* IE 9 fix */
+    -ms-transform: scale(20);
+    /* IE 9 fix */
+    opacity: 0;
+    cursor: pointer; }
+  .popup-design .file_upload > button {
+    transition: background 0.2s;
+    border-radius: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: #ec644b;
+    border: 2px dashed #ec644b;
+    padding: 1.5rem; }
+    .popup-design .file_upload > button:before {
+      content: '';
+      background: url("../icons/promo/icon1.svg") no-repeat center;
+      width: 1.6rem;
+      height: 1.6rem;
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      right: 2px;
+      background-size: 100%; }
+  .popup-design .form {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0; }
+    .popup-design .form input, .popup-design .form textarea {
+      border: none;
+      border-radius: 50px;
+      background-color: #ffffff;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      color: inherit;
+      resize: none; }
+    .popup-design .form input::placeholder, .popup-design .form textarea::placeholder {
+      color: black;
+      text-align: center; }
+  .popup-design .button-order {
+    width: 100%;
+    margin-top: 1rem; }
+  .popup-design h4 {
+    margin-bottom: 3.5rem;
+    color: #ec644b; }
 
-.button-order {
-  width: 100%;
-  margin-top: 1rem; }
+.popup-close {
+  position: absolute;
+  top: -5rem;
+  right: -1.5rem;
+  font-size: 5rem;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  background: transparent;
+  color: #ffffff;
+  border: none; }
 
-h4 {
-  margin-bottom: 3.5rem; }
+.popup-content {
+  position: fixed;
+  text-align: center;
+  max-width: 35rem;
+  left: 50%;
+  top: 10%;
+  background-color: #ededed;
+  border-radius: 4px;
+  transform: translateX(-50%) !important;
+  padding: 3rem 6rem 4rem 6rem; }
+
+.pageup {
+  opacity: 0.8;
+  width: 26px;
+  height: 26px;
+  position: fixed;
+  bottom: 100px;
+  right: 5%;
+  z-index: 40;
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 1s all; }

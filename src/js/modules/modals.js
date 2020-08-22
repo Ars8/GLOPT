@@ -1,7 +1,7 @@
 const modals = () => {
     let btnPressed = false;
 
-    function bindModal(triggerSelector, modalSelector, closeSelector, destroy = false) {
+    function bindModal(triggerSelector, modalSelector, closeSelector) {
         const trigger = document.querySelectorAll(triggerSelector),
               modal = document.querySelector(modalSelector),
               close = document.querySelector(closeSelector),
@@ -15,15 +15,6 @@ const modals = () => {
                 }
 
                 btnPressed = true;
-
-                if (destroy) {
-                    item.remove();
-                }
-
-                windows.forEach(item => {
-                    item.style.display = 'none';
-                    item.classList.add('animated', 'fadeIn');
-                });
     
                 modal.style.display = "block";
                 document.body.style.overflow = "hidden";
@@ -102,7 +93,7 @@ const modals = () => {
     bindModal('.button_submit', '.popup-design', '.popup-design .popup-close');
     bindModal('.button__calc', '.popup-gift', '.popup-gift .popup-close');
     openByScroll('.button__calc');
-    // showModalByTime('.popup-consultation', 5000);
+    /* showModalByTime('.popup-consultation', 5000); */
 };
 
 export default modals;

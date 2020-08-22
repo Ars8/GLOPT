@@ -40,7 +40,7 @@ gulp.task("build-js", () => {
                     watch: false,
                     devtool: "source-map",
                     module: {
-                        rules: [
+                        rules: [                  
                           {
                             test: /\.m?js$/,
                             exclude: /(node_modules|bower_components)/,
