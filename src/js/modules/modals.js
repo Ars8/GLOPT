@@ -1,7 +1,7 @@
 const modals = () => {
     let btnPressed = false;
 
-    function bindModal(triggerSelector, modalSelector, closeSelector) {
+    function bindModal(triggerSelector, modalSelector, closeSelector, destroy = false) {
         const trigger = document.querySelectorAll(triggerSelector),
               modal = document.querySelector(modalSelector),
               close = document.querySelector(closeSelector),
@@ -15,6 +15,15 @@ const modals = () => {
                 }
 
                 btnPressed = true;
+
+                if (destroy) {
+                    item.remove();
+                }
+
+                windows.forEach(item => {
+                    item.style.display = 'none';
+                    item.classList.add('animated', 'fadeIn');
+                });
     
                 modal.style.display = "block";
                 document.body.style.overflow = "hidden";

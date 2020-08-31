@@ -14,7 +14,7 @@ const sliders = (slides, dir, prev, next) => {
         }
 
         items.forEach(item => {
-            item.classList.add("animate__animated");
+            item.classList.add("animated");
             item.style.display = "none";
         });
 

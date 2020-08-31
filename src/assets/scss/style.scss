@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-@import "~animate.css/animate.css";
+@import "animate.css";
 $orange: rgb(236, 100, 75);
 $white: #ffffff;
 $grey: #f3f3f3;
@@ -509,9 +509,10 @@ body{
 		text-align: center;
 	}
 	&__content{
-		display: flex;
-		justify-content: space-between;
 		margin-top: 40px;
+		&-wrap{
+			margin: auto;
+		}
 	}
 	&-item{
 		max-width: 360px;
@@ -519,6 +520,7 @@ body{
 		flex-direction: column;
 		justify-content: start;
 		align-items: center;
+		margin: auto;
 		&__header{
 			font-size: 16px;
 			font-weight: 400;
