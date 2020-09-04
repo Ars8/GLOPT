@@ -20,6 +20,7 @@ body{
 	font-size: 12px;
 	font-weight: 400;
 	text-transform: uppercase;
+	outline: none;
 	&:hover{
 		background-color: #dc5238;
 	}
@@ -701,6 +702,7 @@ body{
 		background: transparent;
 		color: $white;
 		border: none;
+		outline: none;
 	}
 	&-content {
 		position: fixed;
@@ -750,6 +752,7 @@ body{
 		background: transparent;
 		color: $white;
 		border: none;
+		outline: none;
 	}
 	&-content {
 		position: fixed;
@@ -873,6 +876,7 @@ body{
 		background: transparent;
 		color: $white;
 		border: none;
+		outline: none;
 	}
 	&-content {
 		position: fixed;
@@ -887,13 +891,13 @@ body{
 	}
 }
 .pageup {
-	opacity: 0.8;
+	opacity: 0;
 	width: 26px ;
 	height: 26px;
 	position: fixed;
 	bottom: 100px;
 	right: 5%;
-	z-index: 40;
+	z-index: 30;
 	background-color: #fff;
 	cursor: pointer;
 	border: 1px solid white;

@@ -13,7 +13,8 @@ body {
   border-radius: 22.5px;
   font-size: 12px;
   font-weight: 400;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  outline: none; }
   .button:hover {
     background-color: #dc5238; }
   .button__calc {
@@ -595,7 +596,8 @@ body {
   text-align: center;
   background: transparent;
   color: #ffffff;
-  border: none; }
+  border: none;
+  outline: none; }
 
 .popup-content {
   position: fixed;
@@ -639,7 +641,8 @@ body {
   text-align: center;
   background: transparent;
   color: #ffffff;
-  border: none; }
+  border: none;
+  outline: none; }
 
 .popup-content {
   position: fixed;
@@ -751,7 +754,8 @@ body {
   text-align: center;
   background: transparent;
   color: #ffffff;
-  border: none; }
+  border: none;
+  outline: none; }
 
 .popup-content {
   position: fixed;
@@ -765,13 +769,13 @@ body {
   padding: 3rem 6rem 4rem 6rem; }
 
 .pageup {
-  opacity: 0.8;
+  opacity: 0;
   width: 26px;
   height: 26px;
   position: fixed;
   bottom: 100px;
   right: 5%;
-  z-index: 40;
+  z-index: 30;
   background-color: #fff;
   cursor: pointer;
   border: 1px solid white;
