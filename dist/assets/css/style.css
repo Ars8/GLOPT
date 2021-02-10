@@ -203,7 +203,7 @@ body {
       text-align: center; }
 
 .agent {
-  background-image: url(../img/agent/agent_bg_image.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/agent/agent_bg_image.jpg);
   min-height: 338px;
   display: flex;
   flex-direction: column;
@@ -356,7 +356,7 @@ body {
       margin-top: 30px; }
 
 .managers {
-  background-image: url(../img/managers/managers.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/managers/managers.jpg);
   min-height: 350px;
   display: flex;
   flex-direction: column;
@@ -481,7 +481,7 @@ body {
   right: 0; }
 
 .questions {
-  background-image: url(../img/questions/questions-bg.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5)), url(../img/questions/questions-bg.jpg);
   min-height: 430px;
   display: flex;
   flex-direction: column;
@@ -510,7 +510,7 @@ body {
       text-align: center; }
 
 .map {
-  background-image: url(../img/map/map.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/map/map.jpg);
   min-height: 500px; }
 
 .footer {

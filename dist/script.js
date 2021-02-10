@@ -1801,12 +1801,12 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_modules_sliders__WEBPACK_IMPORTED_MODULE_1__["default"])('.comment__content-wrap', 'horizontal', '.main-prev-btn', '.main-next-btn');
   Object(_modules_scrolling__WEBPACK_IMPORTED_MODULE_2__["default"])('.pageup');
-  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('.advantages');
-  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('.aboutwork');
-  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('.price');
-  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('.schema-work');
-  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('.comment');
-  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('.questions');
+  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('#adv');
+  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('#abwork');
+  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('#pr');
+  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('#schwork');
+  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('#comm');
+  Object(_modules_scrollinToLink__WEBPACK_IMPORTED_MODULE_4__["default"])('#quest');
   Object(_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])();
 });
 
@@ -1829,7 +1829,7 @@ const forms = () => {
   const form = document.querySelectorAll('form'),
         inputs = document.querySelectorAll('input'),
         phoneInputs = document.querySelectorAll('input[name="user_phone"]');
-  phoneInputs.forEach('input', () => {
+  phoneInputs.forEach(item, () => {
     item.addEventListener('input', () => {
       item.value = item.value.replace(/\D/, '');
     });
@@ -1843,7 +1843,7 @@ const forms = () => {
   const postData = async (url, data) => {
     document.querySelector('.status').textContent = message.loading;
     let res = await fetch(url, {
-      method: "POST",
+      method: 'POST',
       body: data
     });
     return await res.text();
@@ -2003,6 +2003,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const scrollingToLink = upSelector => {
+  console.log('done');
   const upElem = document.querySelector(upSelector);
   const element = document.documentElement,
         body = document.body;
