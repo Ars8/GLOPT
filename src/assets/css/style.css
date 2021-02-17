@@ -781,3 +781,33 @@ body {
   cursor: pointer;
   border: 1px solid white;
   transition: 1s all; }
+
+@media (max-width: 1399px) {
+  .container {
+    max-width: 880px; }
+  .main__line-first {
+    width: 260px; }
+  .main__line-second {
+    width: 260px; }
+  .nav {
+    font-size: 0.6rem; }
+  .nav-item {
+    margin-left: 0.6rem;
+    padding-right: 0.6rem; }
+  .header__phone {
+    font-size: 15px; }
+  .header__phone span {
+    font-size: 15px; }
+  .main__title {
+    font-size: 3rem; }
+  .main__subheader {
+    font-size: 2rem; }
+  .aboutwork {
+    height: auto; }
+  .aboutwork__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin-top: 10px; } }
