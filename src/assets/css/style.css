@@ -810,4 +810,12 @@ body {
     justify-content: space-between;
     align-items: center;
     height: auto;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  .price__carts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center; }
+    .price__carts-item {
+      margin: 0 20px 20px 0; } }
